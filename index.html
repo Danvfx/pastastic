@@ -30,31 +30,37 @@
       <a href="#order" class="hide-sm">Order</a>
     </nav>
     <a class="wordmark" href="#top" aria-label="Pastastic, back to top">
-      <img class="wordmark-logo" src="assets/logo.jpg" alt="" width="40" height="40">
+      <img class="wordmark-logo" src="assets/logo-art.webp" alt="" width="719" height="720">
       <span class="wordmark-text">
         <span class="wordmark-name">Pastastic</span>
         <span class="wordmark-sub">Twirled your way,<br>Pastastic all day</span>
       </span>
     </a>
     <div class="top-right">
-      <a class="pill hide-sm" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
-      <a class="pill show-sm" href="#order">Order</a>
+      <a class="pill pill-light hide-sm" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+      <a class="pill pill-sun show-sm" href="#order">Order</a>
     </div>
   </header>
 
   <main id="top">
-    <!-- HERO: the three plates, floating on white -->
+    <!-- HERO: brand blue, logo artwork, plates -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-plates" aria-hidden="true">
-        <img class="hp hp-1" src="assets/plate-cajun.webp" alt="" width="1000" height="884" fetchpriority="high">
-        <img class="hp hp-2" src="assets/plate-garlic.webp" alt="" width="1000" height="882" fetchpriority="high">
-        <img class="hp hp-3" src="assets/plate-tuna.webp" alt="" width="1000" height="988">
-      </div>
-      <div class="hero-copy">
-        <h1 id="hero-title">Pasta, twirled your way.</h1>
-        <p>Three creamy pastas, cooked fresh by students. Pick your bowls, then pay with GCash or cash on pickup.</p>
-        <a class="btn" href="#menu">Start your order <svg class="ico"><use href="#i-arrow"/></svg></a>
-        <p class="hero-note" data-config="scheduleText"></p>
+      <svg class="spark sp-1" aria-hidden="true"><use href="#i-star"/></svg>
+      <svg class="spark sp-2" aria-hidden="true"><use href="#i-star"/></svg>
+      <svg class="spark sp-3" aria-hidden="true"><use href="#i-star"/></svg>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <img class="hero-logo" src="assets/logo-art.webp" alt="Pastastic" width="719" height="720" fetchpriority="high">
+          <h1 id="hero-title">Pasta, twirled <span>your way.</span></h1>
+          <p>Three creamy pastas, cooked fresh by students. Pick your bowls, then pay with GCash or cash on pickup.</p>
+          <a class="btn btn-sun" href="#menu">Start your order <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <p class="hero-note" data-config="scheduleText"></p>
+        </div>
+        <div class="hero-plates" aria-hidden="true">
+          <img class="hp hp-1" src="assets/plate-cajun.webp" alt="" width="1000" height="884">
+          <img class="hp hp-2" src="assets/plate-garlic.webp" alt="" width="1000" height="882">
+          <img class="hp hp-3" src="assets/plate-tuna.webp" alt="" width="1000" height="988">
+        </div>
       </div>
       <div class="hero-foot">
         <span>Student-made pasta</span>
@@ -62,15 +68,15 @@
       </div>
     </section>
 
-    <!-- BRAND BAND -->
-    <section class="band" aria-labelledby="band-title">
-      <div class="band-inner">
-        <img class="band-logo" src="assets/logo.jpg" alt="Pastastic logo: Twirled your way, Pastastic all day" width="600" height="600" loading="lazy">
-        <div class="band-copy">
-          <h2 id="band-title">Twirled your way, <span>Pastastic</span> all day.</h2>
-          <p>A student-run pasta stand with three creamy recipes, cooked fresh and ready for pickup. Every bowl is &#8369;105 to &#8369;109.</p>
-          <a class="btn btn-sun" href="#menu">See the menu <svg class="ico"><use href="#i-arrow"/></svg></a>
-        </div>
+    <!-- HOW IT WORKS -->
+    <section class="steps" aria-labelledby="steps-title">
+      <div class="steps-inner">
+        <h2 id="steps-title">How ordering works</h2>
+        <ol>
+          <li><span class="n">1</span><b>Pick your bowls</b><span>Tap + on any pasta. Mix and match.</span></li>
+          <li><span class="n">2</span><b>Tell us who you are</b><span>Name, section and how to reach you.</span></li>
+          <li><span class="n">3</span><b>Pay your way</b><span>GCash now, or cash when you pick up.</span></li>
+        </ol>
       </div>
     </section>
 
@@ -84,7 +90,7 @@
     </section>
 
     <!-- ORDER -->
-    <section id="order" class="block" aria-labelledby="order-title">
+    <section id="order" class="block tint" aria-labelledby="order-title">
       <div class="block-head">
         <h2 id="order-title">Your order</h2>
         <span class="muted">Takes about a minute</span>
@@ -179,10 +185,10 @@
 
   <footer class="foot">
     <div class="foot-inner">
+      <img class="foot-logo" src="assets/logo-art-wide.webp" alt="Pastastic logo: Twirled your way, Pastastic all day" width="1100" height="514" loading="lazy">
       <div class="foot-row">
-        <img src="assets/logo.jpg" alt="Pastastic logo" width="64" height="64" loading="lazy">
-        <p>Pastastic<br><span>Twirled your way, Pastastic all day.</span></p>
-        <a class="pill pill-light" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+        <p>Questions about your order?</p>
+        <a class="btn btn-sun btn-sm" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
       </div>
       <div class="foot-row foot-small">
         <span data-config="groupLabel"></span>
