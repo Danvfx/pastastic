@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pastastic | Twirled your way, Pastastic all day!</title>
+  <meta name="description" content="Order Pastastic pasta: Garlic Parmesan Chicken, Tuna Salpicao and Creamy Cajun Sausage Penne. Pay with GCash or cash on pickup.">
+  <meta name="theme-color" content="#1453b4">
+  <meta property="og:title" content="Pastastic">
+  <meta property="og:description" content="Your pasta. Your way. Your Pastastic. Order online in a minute.">
+  <meta property="og:image" content="assets/logo-wide.jpg">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#order">Skip to order form</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Pastastic home">
+      <img src="assets/logo.jpg" alt="" width="44" height="44">
+      <span>Pastastic</span>
+    </a>
+    <nav class="topnav" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#order" class="pill">Order</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-config="groupLabel">Est. 2026</p>
+        <h1>Your pasta.<br>Your way.<br><span>Your Pastastic.</span></h1>
+        <p class="lede">Three creamy, saucy, made-with-love pastas, cooked fresh by students for students. Pick your bowls, pay by GCash or cash, and we will have it ready.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#menu">Order now</a>
+          <a class="btn btn-ghost" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+        </div>
+        <p class="hero-note" data-config="scheduleText"></p>
+      </div>
+      <div class="hero-art">
+        <img src="assets/hero.jpg" alt="All three Pastastic pastas on wooden plates" width="1000" height="1333" fetchpriority="high">
+        <span class="star s1" aria-hidden="true"></span>
+        <span class="star s2" aria-hidden="true"></span>
+        <span class="star s3" aria-hidden="true"></span>
+        <span class="sticker" aria-hidden="true">from<br><b>&#8369;105</b></span>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu" aria-labelledby="menu-title">
+      <div class="section-head">
+        <h2 id="menu-title">The menu</h2>
+        <p>Tap <b>+</b> to add bowls. Mix and match as many as you like.</p>
+      </div>
+      <div class="dishes" id="dishes"><!-- filled by main.js --></div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" aria-label="Photos">
+      <div class="strip">
+        <img src="assets/gallery-1.jpg" alt="Three Pastastic plates on a wooden table" loading="lazy" width="700" height="933">
+        <img src="assets/gallery-5.jpg" alt="Tuna Salpicao pasta on a yellow cushion" loading="lazy" width="700" height="933">
+        <img src="assets/gallery-3.jpg" alt="Garlic Parmesan Chicken Pasta close up" loading="lazy" width="700" height="933">
+        <img src="assets/gallery-6.jpg" alt="Creamy Cajun Sausage Penne held up at night" loading="lazy" width="700" height="933">
+        <img src="assets/gallery-4.jpg" alt="Creamy Cajun Sausage Penne on a gold charger" loading="lazy" width="700" height="933">
+        <img src="assets/gallery-2.jpg" alt="Say hello to Pastastic poster" loading="lazy" width="700" height="990">
+      </div>
+    </section>
+
+    <!-- ORDER FORM -->
+    <section id="order" class="order" aria-labelledby="order-title">
+      <div class="section-head">
+        <h2 id="order-title">Your order</h2>
+        <p>Fill this in and hit send. It takes about a minute.</p>
+      </div>
+
+      <form id="orderForm" novalidate>
+        <div class="card summary-card">
+          <h3>Bowls</h3>
+          <ul id="cartList" class="cart-list"></ul>
+          <p id="cartEmpty" class="cart-empty">No bowls yet. <a href="#menu">Pick from the menu</a>.</p>
+          <div class="total-row"><span>Total</span><strong id="cartTotal">&#8369;0</strong></div>
+          <p class="field-error" id="err-cart" role="alert"></p>
+        </div>
+
+        <div class="card">
+          <h3>About you</h3>
+          <div class="field">
+            <label for="f-name">Full name <span class="req">*</span></label>
+            <input id="f-name" name="name" autocomplete="name" placeholder="Surname, First name" required>
+            <p class="field-error" id="err-name"></p>
+          </div>
+          <div class="field">
+            <label for="f-section">Grade &amp; section <span class="req">*</span></label>
+            <input id="f-section" name="section" placeholder="e.g. 12-E" required>
+            <p class="field-error" id="err-section"></p>
+          </div>
+          <div class="field">
+            <label for="f-contact">Messenger name or mobile number <span class="req">*</span></label>
+            <input id="f-contact" name="contact" autocomplete="tel" placeholder="So we can reach you" required>
+            <p class="field-error" id="err-contact"></p>
+          </div>
+          <div class="field" id="emailField">
+            <label for="f-email">Email <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@school.edu.ph">
+            <p class="field-error" id="err-email"></p>
+          </div>
+          <div class="field">
+            <label for="f-campus">Campus <span class="req">*</span></label>
+            <select id="f-campus" name="campus" required></select>
+            <p class="field-error" id="err-campus"></p>
+          </div>
+          <div class="field" id="otherCampusField" hidden>
+            <label for="f-otherCampus">Which school? <span class="req">*</span></label>
+            <input id="f-otherCampus" name="otherCampus" placeholder="School name, or N/A if not studying">
+            <p class="field-error" id="err-otherCampus"></p>
+          </div>
+          <fieldset class="field">
+            <legend>Age range <span class="req">*</span></legend>
+            <div class="chips" id="ageChips"></div>
+            <p class="field-error" id="err-age"></p>
+          </fieldset>
+        </div>
+
+        <div class="card">
+          <h3>Payment</h3>
+          <fieldset class="field">
+            <legend class="sr-only">Payment method</legend>
+            <div class="pay-options">
+              <label class="pay-opt">
+                <input type="radio" name="payment" value="GCASH" checked>
+                <span><b>GCash</b><small>Scan the QR after you order</small></span>
+              </label>
+              <label class="pay-opt">
+                <input type="radio" name="payment" value="CASH">
+                <span><b>Cash on pickup</b><small>Pay when you get your bowl</small></span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="gcash-box" id="gcashBox">
+            <img src="assets/gcash-qr.jpg" alt="Pastastic GCash QR code" width="700" height="997" loading="lazy">
+            <p>Send the exact total, then screenshot your receipt and message it to us with your name.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Pickup time or notes</h3>
+          <div class="field">
+            <label for="f-notes">Anything we should know? <span class="opt">(optional)</span></label>
+            <textarea id="f-notes" name="notes" rows="3" placeholder="Preferred pickup time, less spicy, extra cheese..."></textarea>
+          </div>
+        </div>
+
+        <p class="form-error" id="formError" role="alert"></p>
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+          <span class="btn-label">Send my order</span>
+        </button>
+        <p class="fine">By ordering you agree to pay on pickup or by GCash. Questions? <a data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo-wide.jpg" alt="Pastastic logo: Twirled your way, Pastastic all day!" width="1000" height="563" loading="lazy">
+    <p class="footer-line" data-config="groupLabel"></p>
+    <a class="btn btn-light" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+    <p class="tiny">Made with sauce and love. &copy; 2026 Pastastic</p>
+  </footer>
+
+  <!-- Sticky cart bar (mobile) -->
+  <div class="cartbar" id="cartbar" aria-live="polite">
+    <div class="cartbar-info">
+      <span id="barCount">0 bowls</span>
+      <strong id="barTotal">&#8369;0</strong>
+    </div>
+    <a class="btn btn-yellow" href="#order" id="barBtn">Review order</a>
+  </div>
+
+  <!-- Confirmation -->
+  <div class="confirm" id="confirm" role="dialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
+    <div class="confirm-card">
+      <div class="confirm-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="40" height="40"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2 id="confirm-title" tabindex="-1">Order received!</h2>
+      <p class="confirm-sub">Thank you po! Your pasta is on the way to the pot.</p>
+      <ul class="confirm-list" id="confirmList"></ul>
+      <div class="total-row"><span>Total</span><strong id="confirmTotal"></strong></div>
+      <p class="confirm-meta" id="confirmMeta"></p>
+      <div class="gcash-box" id="confirmGcash" hidden>
+        <img src="assets/gcash-qr.jpg" alt="Pastastic GCash QR code" width="700" height="997">
+        <p>Pay <b id="confirmGcashAmt"></b> via GCash, then send your receipt screenshot to us.</p>
+      </div>
+      <div class="confirm-actions">
+        <a class="btn btn-primary btn-block" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+        <button type="button" class="btn btn-ghost btn-block" id="newOrder">Place another order</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
