@@ -30,8 +30,11 @@
       <a href="#order" class="hide-sm">Order</a>
     </nav>
     <a class="wordmark" href="#top" aria-label="Pastastic, back to top">
-      <span><svg class="star" aria-hidden="true"><use href="#i-star"/></svg>Pastastic</span>
-      <span class="wordmark-sub">Twirled your way,<br>Pastastic all day</span>
+      <img class="wordmark-logo" src="assets/logo.jpg" alt="" width="40" height="40">
+      <span class="wordmark-text">
+        <span class="wordmark-name">Pastastic</span>
+        <span class="wordmark-sub">Twirled your way,<br>Pastastic all day</span>
+      </span>
     </a>
     <div class="top-right">
       <a class="pill hide-sm" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
@@ -56,6 +59,18 @@
       <div class="hero-foot">
         <span>Student-made pasta</span>
         <span data-config="groupLabel">Est. 2026</span>
+      </div>
+    </section>
+
+    <!-- BRAND BAND -->
+    <section class="band" aria-labelledby="band-title">
+      <div class="band-inner">
+        <img class="band-logo" src="assets/logo.jpg" alt="Pastastic logo: Twirled your way, Pastastic all day" width="600" height="600" loading="lazy">
+        <div class="band-copy">
+          <h2 id="band-title">Twirled your way, <span>Pastastic</span> all day.</h2>
+          <p>A student-run pasta stand with three creamy recipes, cooked fresh and ready for pickup. Every bowl is &#8369;105 to &#8369;109.</p>
+          <a class="btn btn-sun" href="#menu">See the menu <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
     </section>
 
@@ -163,14 +178,16 @@
   </main>
 
   <footer class="foot">
-    <div class="foot-row">
-      <img src="assets/logo.jpg" alt="Pastastic logo" width="56" height="56" loading="lazy">
-      <p>Pastastic<br><span class="muted">Twirled your way, Pastastic all day.</span></p>
-      <a class="pill" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
-    </div>
-    <div class="foot-row foot-small">
-      <span data-config="groupLabel"></span>
-      <span>&copy; 2026 Pastastic</span>
+    <div class="foot-inner">
+      <div class="foot-row">
+        <img src="assets/logo.jpg" alt="Pastastic logo" width="64" height="64" loading="lazy">
+        <p>Pastastic<br><span>Twirled your way, Pastastic all day.</span></p>
+        <a class="pill pill-light" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+      </div>
+      <div class="foot-row foot-small">
+        <span data-config="groupLabel"></span>
+        <span>&copy; 2026 Pastastic</span>
+      </div>
     </div>
   </footer>
 
@@ -179,7 +196,7 @@
       <span id="barCount">0 bowls</span>
       <strong id="barTotal">&#8369;0</strong>
     </div>
-    <a class="btn btn-sm" href="#order" id="barBtn">Review order</a>
+    <a class="btn btn-sm btn-sun" href="#order" id="barBtn">Review order</a>
   </div>
 
   <div class="confirm" id="confirm" role="dialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
