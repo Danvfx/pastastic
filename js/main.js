@@ -34,16 +34,18 @@ const CONFIG = {
       id: "garlic",
       name: "Garlic Parmesan Chicken Pasta",
       price: 109,
-      img: "assets/dish-garlic-parmesan.jpg",
+      img: "assets/plate-garlic.webp",
+      imgH: 882,
       desc: "Fettuccine in a creamy garlic parmesan sauce with tender chicken and fresh parsley.",
-      tag: "Crowd favorite",
+      tag: "",
       formLabel: "🍗 Garlic Parmesan Chicken Pasta | ₱109",
     },
     {
       id: "cajun",
       name: "Creamy Cajun Sausage Penne",
       price: 109,
-      img: "assets/dish-cajun-penne.jpg",
+      img: "assets/plate-cajun.webp",
+      imgH: 884,
       desc: "Penne tossed in a smoky, creamy Cajun sauce with sliced sausage and a little kick.",
       tag: "A bit spicy",
       formLabel: "🌭 Creamy Cajun Sausage Penne | ₱109",
@@ -52,9 +54,10 @@ const CONFIG = {
       id: "tuna",
       name: "Tuna Salpicao Pasta",
       price: 105,
-      img: "assets/dish-tuna-salpicao.jpg",
+      img: "assets/plate-tuna.webp",
+      imgH: 988,
       desc: "Garlicky salpicao-style pasta with tuna and beef, finished with grated cheese.",
-      tag: "Garlic lovers",
+      tag: "",
       formLabel: "🍣 Tuna Salpicao Pasta | ₱105",
     },
   ],
@@ -114,21 +117,17 @@ const dishesEl = $("#dishes");
 dishesEl.innerHTML = CONFIG.DISHES.map(
   (d) => `
   <article class="dish" data-id="${d.id}">
-    <div class="dish-img">
-      <img src="${d.img}" alt="${d.name}" loading="lazy" width="800" height="1067">
-      ${d.tag ? `<span class="dish-tag">${d.tag}</span>` : ""}
+    <img class="dish-img" src="${d.img}" alt="${d.name}, top view" loading="lazy" width="1000" height="${d.imgH}">
+    <div class="dish-head">
+      <h3>${d.name}</h3>
+      <span class="price">${peso(d.price)}</span>
     </div>
-    <div class="dish-body">
-      <div class="dish-top">
-        <h3>${d.name}</h3>
-        <span class="price">${peso(d.price)}</span>
-      </div>
-      <p>${d.desc}</p>
-      <div class="stepper" role="group" aria-label="${d.name} quantity">
-        <button type="button" class="step minus" data-step="-1" aria-label="Remove one ${d.name}">&minus;</button>
-        <output class="qty" aria-live="polite">0</output>
-        <button type="button" class="step plus" data-step="1" aria-label="Add one ${d.name}">+</button>
-      </div>
+    ${d.tag ? `<p class="dish-tag">${d.tag}</p>` : ""}
+    <p class="dish-desc">${d.desc}</p>
+    <div class="stepper" role="group" aria-label="${d.name} quantity">
+      <button type="button" class="step minus" data-step="-1" aria-label="Remove one ${d.name}"><svg class="ico"><use href="#i-minus"/></svg></button>
+      <output class="qty" aria-live="polite">0</output>
+      <button type="button" class="step plus" data-step="1" aria-label="Add one ${d.name}"><svg class="ico"><use href="#i-plus"/></svg></button>
     </div>
   </article>`
 ).join("");

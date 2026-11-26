@@ -11,7 +11,7 @@ All settings are in the `CONFIG` object at the top of `js/main.js`:
 - `FORM_ID` and `ENTRY`: the Google Form ids. If questions in the form change, re-check these.
 
 ## Photos
-Drop new photos into `assets/` with the same filenames (`hero.jpg`, `dish-garlic-parmesan.jpg`, `dish-cajun-penne.jpg`, `dish-tuna-salpicao.jpg`, `gallery-1.jpg` to `gallery-6.jpg`, `logo.jpg`, `logo-wide.jpg`, `gcash-qr.jpg`). Keep them under about 300 KB each so phones load fast.
+The dishes are shown as round plate cut-outs on white: `assets/plate-garlic.webp`, `assets/plate-cajun.webp`, `assets/plate-tuna.webp` (transparent background, about 1000px wide). To swap one, export a top-down plate photo with the background removed and save it under the same name. Also in `assets/`: `logo.jpg`, `logo-wide.jpg` (link previews), `gcash-qr.jpg`.
 
 ## How orders map to the form
 The form has one flavor question and one "How many?" question, so:

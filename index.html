@@ -3,200 +3,199 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Pastastic | Twirled your way, Pastastic all day!</title>
-  <meta name="description" content="Order Pastastic pasta: Garlic Parmesan Chicken, Tuna Salpicao and Creamy Cajun Sausage Penne. Pay with GCash or cash on pickup.">
-  <meta name="theme-color" content="#1453b4">
+  <title>Pastastic | Twirled your way, Pastastic all day</title>
+  <meta name="description" content="Order Pastastic pasta: Garlic Parmesan Chicken, Creamy Cajun Sausage Penne and Tuna Salpicao. Pay with GCash or cash on pickup.">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Pastastic">
-  <meta property="og:description" content="Your pasta. Your way. Your Pastastic. Order online in a minute.">
+  <meta property="og:description" content="Three pastas, cooked fresh by students. Order online in a minute.">
   <meta property="og:image" content="assets/logo-wide.jpg">
   <link rel="icon" href="assets/logo.jpg">
-  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip" href="#order">Skip to order form</a>
 
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Pastastic home">
-      <img src="assets/logo.jpg" alt="" width="44" height="44">
-      <span>Pastastic</span>
-    </a>
-    <nav class="topnav" aria-label="Main">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="top">
+    <nav class="top-left" aria-label="Main">
       <a href="#menu">Menu</a>
-      <a href="#order" class="pill">Order</a>
+      <a href="#order" class="hide-sm">Order</a>
     </nav>
+    <a class="wordmark" href="#top" aria-label="Pastastic, back to top">
+      <span>Pastastic</span>
+      <span class="wordmark-sub">Twirled your way,<br>Pastastic all day</span>
+    </a>
+    <div class="top-right">
+      <a class="pill hide-sm" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+      <a class="pill show-sm" href="#order">Order</a>
+    </div>
   </header>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="hero">
+    <!-- HERO: the three plates, floating on white -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-plates" aria-hidden="true">
+        <img class="hp hp-1" src="assets/plate-cajun.webp" alt="" width="1000" height="884" fetchpriority="high">
+        <img class="hp hp-2" src="assets/plate-garlic.webp" alt="" width="1000" height="882" fetchpriority="high">
+        <img class="hp hp-3" src="assets/plate-tuna.webp" alt="" width="1000" height="988">
+      </div>
       <div class="hero-copy">
-        <p class="eyebrow" data-config="groupLabel">Est. 2026</p>
-        <h1>Your pasta.<br>Your way.<br><span>Your Pastastic.</span></h1>
-        <p class="lede">Three creamy, saucy, made-with-love pastas, cooked fresh by students for students. Pick your bowls, pay by GCash or cash, and we will have it ready.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#menu">Order now</a>
-          <a class="btn btn-ghost" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
-        </div>
+        <h1 id="hero-title">Pasta, twirled your way.</h1>
+        <p>Three creamy pastas, cooked fresh by students. Pick your bowls, then pay with GCash or cash on pickup.</p>
+        <a class="btn" href="#menu">Start your order <svg class="ico"><use href="#i-arrow"/></svg></a>
         <p class="hero-note" data-config="scheduleText"></p>
       </div>
-      <div class="hero-art">
-        <img src="assets/hero.jpg" alt="All three Pastastic pastas on wooden plates" width="1000" height="1333" fetchpriority="high">
-        <span class="star s1" aria-hidden="true"></span>
-        <span class="star s2" aria-hidden="true"></span>
-        <span class="star s3" aria-hidden="true"></span>
-        <span class="sticker" aria-hidden="true">from<br><b>&#8369;105</b></span>
+      <div class="hero-foot">
+        <span>Student-made pasta</span>
+        <span data-config="groupLabel">Est. 2026</span>
       </div>
     </section>
 
     <!-- MENU -->
-    <section id="menu" class="menu" aria-labelledby="menu-title">
-      <div class="section-head">
-        <h2 id="menu-title">The menu</h2>
-        <p>Tap <b>+</b> to add bowls. Mix and match as many as you like.</p>
+    <section id="menu" class="block" aria-labelledby="menu-title">
+      <div class="block-head">
+        <h2 id="menu-title">Menu</h2>
+        <span class="muted">Three dishes, one bowl each</span>
       </div>
       <div class="dishes" id="dishes"><!-- filled by main.js --></div>
     </section>
 
-    <!-- GALLERY -->
-    <section class="gallery" aria-label="Photos">
-      <div class="strip">
-        <img src="assets/gallery-1.jpg" alt="Three Pastastic plates on a wooden table" loading="lazy" width="700" height="933">
-        <img src="assets/gallery-5.jpg" alt="Tuna Salpicao pasta on a yellow cushion" loading="lazy" width="700" height="933">
-        <img src="assets/gallery-3.jpg" alt="Garlic Parmesan Chicken Pasta close up" loading="lazy" width="700" height="933">
-        <img src="assets/gallery-6.jpg" alt="Creamy Cajun Sausage Penne held up at night" loading="lazy" width="700" height="933">
-        <img src="assets/gallery-4.jpg" alt="Creamy Cajun Sausage Penne on a gold charger" loading="lazy" width="700" height="933">
-        <img src="assets/gallery-2.jpg" alt="Say hello to Pastastic poster" loading="lazy" width="700" height="990">
-      </div>
-    </section>
-
-    <!-- ORDER FORM -->
-    <section id="order" class="order" aria-labelledby="order-title">
-      <div class="section-head">
+    <!-- ORDER -->
+    <section id="order" class="block" aria-labelledby="order-title">
+      <div class="block-head">
         <h2 id="order-title">Your order</h2>
-        <p>Fill this in and hit send. It takes about a minute.</p>
+        <span class="muted">Takes about a minute</span>
       </div>
 
-      <form id="orderForm" novalidate>
-        <div class="card summary-card">
+      <form id="orderForm" class="order" novalidate>
+        <aside class="summary summary-card" aria-label="Order summary">
           <h3>Bowls</h3>
-          <ul id="cartList" class="cart-list"></ul>
-          <p id="cartEmpty" class="cart-empty">No bowls yet. <a href="#menu">Pick from the menu</a>.</p>
-          <div class="total-row"><span>Total</span><strong id="cartTotal">&#8369;0</strong></div>
+          <ul id="cartList" class="lines"></ul>
+          <p id="cartEmpty" class="muted">Nothing yet. <a href="#menu">Choose from the menu</a>.</p>
+          <div class="total"><span>Total</span><strong id="cartTotal">&#8369;0</strong></div>
           <p class="field-error" id="err-cart" role="alert"></p>
-        </div>
+        </aside>
 
-        <div class="card">
-          <h3>About you</h3>
-          <div class="field">
-            <label for="f-name">Full name <span class="req">*</span></label>
-            <input id="f-name" name="name" autocomplete="name" placeholder="Surname, First name" required>
-            <p class="field-error" id="err-name"></p>
-          </div>
-          <div class="field">
-            <label for="f-section">Grade &amp; section <span class="req">*</span></label>
-            <input id="f-section" name="section" placeholder="e.g. 12-E" required>
-            <p class="field-error" id="err-section"></p>
-          </div>
-          <div class="field">
-            <label for="f-contact">Messenger name or mobile number <span class="req">*</span></label>
-            <input id="f-contact" name="contact" autocomplete="tel" placeholder="So we can reach you" required>
-            <p class="field-error" id="err-contact"></p>
-          </div>
-          <div class="field" id="emailField">
-            <label for="f-email">Email <span class="req">*</span></label>
-            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@school.edu.ph">
-            <p class="field-error" id="err-email"></p>
-          </div>
-          <div class="field">
-            <label for="f-campus">Campus <span class="req">*</span></label>
-            <select id="f-campus" name="campus" required></select>
-            <p class="field-error" id="err-campus"></p>
-          </div>
-          <div class="field" id="otherCampusField" hidden>
-            <label for="f-otherCampus">Which school? <span class="req">*</span></label>
-            <input id="f-otherCampus" name="otherCampus" placeholder="School name, or N/A if not studying">
-            <p class="field-error" id="err-otherCampus"></p>
-          </div>
-          <fieldset class="field">
-            <legend>Age range <span class="req">*</span></legend>
-            <div class="chips" id="ageChips"></div>
-            <p class="field-error" id="err-age"></p>
-          </fieldset>
-        </div>
-
-        <div class="card">
-          <h3>Payment</h3>
-          <fieldset class="field">
-            <legend class="sr-only">Payment method</legend>
-            <div class="pay-options">
-              <label class="pay-opt">
-                <input type="radio" name="payment" value="GCASH" checked>
-                <span><b>GCash</b><small>Scan the QR after you order</small></span>
-              </label>
-              <label class="pay-opt">
-                <input type="radio" name="payment" value="CASH">
-                <span><b>Cash on pickup</b><small>Pay when you get your bowl</small></span>
-              </label>
+        <div class="fields">
+          <fieldset class="group">
+            <legend>About you</legend>
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input id="f-name" name="name" autocomplete="name" placeholder="Surname, First name" required>
+              <p class="field-error" id="err-name"></p>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="f-section">Grade &amp; section</label>
+                <input id="f-section" name="section" placeholder="12-E" required>
+                <p class="field-error" id="err-section"></p>
+              </div>
+              <div class="field">
+                <label for="f-contact">Messenger or mobile</label>
+                <input id="f-contact" name="contact" autocomplete="tel" placeholder="So we can reach you" required>
+                <p class="field-error" id="err-contact"></p>
+              </div>
+            </div>
+            <div class="field" id="emailField">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@school.edu.ph">
+              <p class="field-error" id="err-email"></p>
+            </div>
+            <div class="field">
+              <label for="f-campus">Campus</label>
+              <select id="f-campus" name="campus" required></select>
+              <p class="field-error" id="err-campus"></p>
+            </div>
+            <div class="field" id="otherCampusField" hidden>
+              <label for="f-otherCampus">Which school?</label>
+              <input id="f-otherCampus" name="otherCampus" placeholder="School name, or N/A if not studying">
+              <p class="field-error" id="err-otherCampus"></p>
+            </div>
+            <div class="field">
+              <span class="label" id="age-label">Age range</span>
+              <div class="chips" id="ageChips" role="group" aria-labelledby="age-label"></div>
+              <p class="field-error" id="err-age"></p>
             </div>
           </fieldset>
-          <div class="gcash-box" id="gcashBox">
-            <img src="assets/gcash-qr.jpg" alt="Pastastic GCash QR code" width="700" height="997" loading="lazy">
-            <p>Send the exact total, then screenshot your receipt and message it to us with your name.</p>
+
+          <fieldset class="group">
+            <legend>Payment</legend>
+            <div class="options">
+              <label class="option">
+                <input type="radio" name="payment" value="GCASH" checked>
+                <span class="option-body"><b>GCash</b><small>Scan the QR below and send the exact total</small></span>
+              </label>
+              <label class="option">
+                <input type="radio" name="payment" value="CASH">
+                <span class="option-body"><b>Cash on pickup</b><small>Pay when you get your bowl</small></span>
+              </label>
+            </div>
+            <div class="gcash" id="gcashBox">
+              <img src="assets/gcash-qr.jpg" alt="Pastastic GCash QR code" width="700" height="997" loading="lazy">
+              <p>After paying, screenshot the receipt and send it to us with your name.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="group">
+            <legend>Pickup time or notes</legend>
+            <div class="field">
+              <label for="f-notes">Anything we should know? <span class="muted">Optional</span></label>
+              <textarea id="f-notes" name="notes" rows="3" placeholder="Preferred pickup time, less spicy, extra cheese"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="send">
+            <p class="form-error" id="formError" role="alert"></p>
+            <button type="submit" class="btn btn-block" id="submitBtn"><span class="btn-label">Send my order</span></button>
+            <p class="muted small">All fields are required unless marked optional. Questions? <a data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>.</p>
           </div>
         </div>
-
-        <div class="card">
-          <h3>Pickup time or notes</h3>
-          <div class="field">
-            <label for="f-notes">Anything we should know? <span class="opt">(optional)</span></label>
-            <textarea id="f-notes" name="notes" rows="3" placeholder="Preferred pickup time, less spicy, extra cheese..."></textarea>
-          </div>
-        </div>
-
-        <p class="form-error" id="formError" role="alert"></p>
-        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
-          <span class="btn-label">Send my order</span>
-        </button>
-        <p class="fine">By ordering you agree to pay on pickup or by GCash. Questions? <a data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>.</p>
       </form>
     </section>
   </main>
 
-  <footer class="footer">
-    <img src="assets/logo-wide.jpg" alt="Pastastic logo: Twirled your way, Pastastic all day!" width="1000" height="563" loading="lazy">
-    <p class="footer-line" data-config="groupLabel"></p>
-    <a class="btn btn-light" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
-    <p class="tiny">Made with sauce and love. &copy; 2026 Pastastic</p>
+  <footer class="foot">
+    <div class="foot-row">
+      <img src="assets/logo.jpg" alt="Pastastic logo" width="56" height="56" loading="lazy">
+      <p>Pastastic<br><span class="muted">Twirled your way, Pastastic all day.</span></p>
+      <a class="pill" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+    </div>
+    <div class="foot-row foot-small">
+      <span data-config="groupLabel"></span>
+      <span>&copy; 2026 Pastastic</span>
+    </div>
   </footer>
 
-  <!-- Sticky cart bar (mobile) -->
   <div class="cartbar" id="cartbar" aria-live="polite">
     <div class="cartbar-info">
       <span id="barCount">0 bowls</span>
       <strong id="barTotal">&#8369;0</strong>
     </div>
-    <a class="btn btn-yellow" href="#order" id="barBtn">Review order</a>
+    <a class="btn btn-sm" href="#order" id="barBtn">Review order</a>
   </div>
 
-  <!-- Confirmation -->
   <div class="confirm" id="confirm" role="dialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
-    <div class="confirm-card">
-      <div class="confirm-badge" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="40" height="40"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <h2 id="confirm-title" tabindex="-1">Order received!</h2>
-      <p class="confirm-sub">Thank you po! Your pasta is on the way to the pot.</p>
-      <ul class="confirm-list" id="confirmList"></ul>
-      <div class="total-row"><span>Total</span><strong id="confirmTotal"></strong></div>
+    <div class="sheet">
+      <span class="check" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+      <h2 id="confirm-title" tabindex="-1">Order received</h2>
+      <p class="muted">Thank you po. Here is what we got.</p>
+      <ul class="lines" id="confirmList"></ul>
+      <div class="total"><span>Total</span><strong id="confirmTotal"></strong></div>
       <p class="confirm-meta" id="confirmMeta"></p>
-      <div class="gcash-box" id="confirmGcash" hidden>
+      <div class="gcash" id="confirmGcash" hidden>
         <img src="assets/gcash-qr.jpg" alt="Pastastic GCash QR code" width="700" height="997">
-        <p>Pay <b id="confirmGcashAmt"></b> via GCash, then send your receipt screenshot to us.</p>
+        <p>Pay <b id="confirmGcashAmt"></b> via GCash, then send us the receipt screenshot.</p>
       </div>
-      <div class="confirm-actions">
-        <a class="btn btn-primary btn-block" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
-        <button type="button" class="btn btn-ghost btn-block" id="newOrder">Place another order</button>
+      <div class="sheet-actions">
+        <a class="btn btn-block" data-config-href="messageUrl" href="#" target="_blank" rel="noopener">Message us</a>
+        <button type="button" class="btn btn-block btn-line" id="newOrder">Place another order</button>
       </div>
     </div>
   </div>
